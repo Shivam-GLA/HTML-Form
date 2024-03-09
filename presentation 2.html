@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Bree+Serif&display=swap" rel="stylesheet">
+</head>
+<style>
+    .container {
+        /* border: 2px solid red; */
+        margin-top: -10px;
+    }
+
+    .heading {
+        font-family: 'Baloo Bhai 2', cursive;
+        text-align: center;
+    }
+
+    .heading:hover {
+        font-size: 40px;
+        color: rgb(12, 151, 121);
+        transition-property: font-size, color;
+        transition-duration: 3s;
+        transition-timing-function: ease-in;
+    }
+
+    form {
+        /* border: 2px solid green; */
+        margin-left: 115px;
+    }
+
+    .form-group {
+        /* border: 2px solid black; */
+        font-family: 'Bree Serif', serif;
+        color: brown;
+        font-size: 1.2rem;
+        margin: -4.5px 10px;
+    }
+
+    .form-group:hover {
+        background-color: rgb(250, 250, 171);
+    }
+
+    .form-group label:hover {
+        color: rgb(255, 29, 29);
+    }
+
+    .form-group input {
+        border: 2px solid black;
+        font-family: 'Baloo Bhai 2', cursive;
+        text-align: center;
+        border-radius: 8px;
+        font-size: 15px;
+        width: 20%;
+        height: 20px;
+        margin: 11px 8px;
+
+    }
+
+    .form-group input[type="checkbox"] {
+        width: 50px;
+        height: 14px;
+    }
+
+    .form-group input[type="radio"] {
+        width: 15px;
+    }
+
+    .form-group textarea {
+        font-family: 'Baloo Bhai 2', cursive;
+        border: 2px solid black;
+        border-radius: 10px;
+        margin-top: 6px;
+        width: 250px;
+        height: 100px;
+    }
+
+    .form-group select[name="mycar"] {
+        font-family: 'Baloo Bhai 2', cursive;
+        border: 2px solid black;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 15px;
+        width: 20%;
+        margin: 11px 8px;
+    }
+
+    #btn {
+        background-color: brown;
+        border: 2px solid white;
+        border-radius: 14px;
+        color: white;
+        font-size: 18px;
+        width: 149px;
+        height: 39px;
+        padding: 5px 6px;
+        margin: 15px;
+        cursor: pointer;
+    }
+
+    #btn:hover {
+        background-color: rgb(204, 47, 47);
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1 class="heading">PHP Form Validation</h1>
+        <form action="backend.php">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" name="myname" id="name" placeholder="your name">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="myemail" id="email" placeholder="your email id">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" name="myDate" id="date">
+            </div>
+            <br>
+            <div class="form-group">
+                are you eligible?<input type="checkbox" name="myeligibility" checked>
+            </div>
+            <br>
+            <div class="form-group">
+                Gender:<input type="radio" name="mygender">Male
+                <input type="radio" name="mygender">FeMale
+                <input type="radio" name="mygender">Other
+            </div>
+            <br>
+            <div class="form-group">
+                write about yourself:<br>
+                <textarea name="mytext" cols="90" rows="10">
+                    </textarea>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="car">Car</label>
+                <select name="mycar" id="car">
+                    <option value="bmw">BMW</option>
+                    <option value="audi">Audi</option>
+                    <option value="porsche">Porsche</option>
+                    <option value="lambo">Lamborghini</option>
+                    <option value="swf" selected>swift</option>
+                </select>
+            </div>
+            <br>
+            <div class="form-group">
+                <input id="btn" type="submit" value="Submit Now">
+                <input id="btn" type="Reset" value="Reset Now">
+            </div>
+        </form>
+    </div>
+    </div>
+</body>
+
+</html>
